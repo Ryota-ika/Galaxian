@@ -32,7 +32,7 @@ public class PlayerCtlr : MonoBehaviour {
     }
     void ProcessInputs( ) {
         float moveX = Input.GetAxisRaw( "Horizontal" );
-        float moveY = Input.GetAxisRaw( "Vertical" );
+        //float moveY = Input.GetAxisRaw( "Vertical" );
         moveDirection = new Vector3( moveX, 0.0f, 0.0f );
     }
     private void Move( ) {
