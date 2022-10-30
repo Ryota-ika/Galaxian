@@ -4,16 +4,10 @@ using UnityEngine;
 
 public class EnemyCtlr : MonoBehaviour {
     public GameObject explosion;
-    public GameObject target;
-    public GameObject red_enemy;
-    //int red_enemies_count = 6;
-    //List<GameObject> red_enemies = new List<GameObject>();
+    GameObject target;
     // Start is called before the first frame update
     void Start( ) {
-        //for (int i = 0; i < red_enemies_count; i++)
-        //{
-        //    Instantiate( red_enemy,new Vector3(1,0,0),Quaternion.identity );
-        //}
+        target=GameObject.Find("player");
     }
 
     // Update is called once per frame
@@ -35,7 +29,7 @@ public class EnemyCtlr : MonoBehaviour {
         if( collision.tag == "PlayerGun" ) {
             //Destroy(collision.gameObject);
             collision.gameObject.SetActive( false );
-            Destroy( red_enemy );
+            Destroy( this.gameObject );
             //instantiate‚ðŽg‚¢‚·‚¬‚é‚Æˆ—‚ª‚¨‚à‚­‚È‚é‚Ì‚Åpooling‚É•ÏX
             //Instantiate(explosion,transform.position,Quaternion.identity);
         }
