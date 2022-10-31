@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyCtlr : MonoBehaviour {
+public class RedEnemyCtlr : MonoBehaviour {
     public GameObject explosion;
     GameObject target;
     // Start is called before the first frame update
