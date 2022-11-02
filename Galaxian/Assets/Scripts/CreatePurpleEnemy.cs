@@ -11,7 +11,7 @@ public class CreatePurpleEnemy : MonoBehaviour
     void Start()
     {
         for( int i = 0; i < ENEMY_WIDTH; i++ ) {
-            purple_enemies.Add(Instantiate(purple_enemy,new Vector3( i * 0.6f - 2.1f, 4.5f, 0 ),Quaternion.identity ));
+            purple_enemies.Add(Instantiate(purple_enemy,new Vector3( i * 0.6f - 2.1f, 4.4f, 0 ),Quaternion.identity ));
         }
     }
 
