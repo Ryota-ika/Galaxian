@@ -170,6 +170,75 @@ MonoBehaviour:
   blue_enemies: []
   blue_enemy: {fileID: 2753934845664380292, guid: 3dac3ee56390b7149b3ed0c76ad54852,
     type: 3}
+--- !u!1001 &415514964
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6049849991850398559, guid: d834686678db2a44986625a9b9a2f1e8,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6049849991850398559, guid: d834686678db2a44986625a9b9a2f1e8,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6049849991850398559, guid: d834686678db2a44986625a9b9a2f1e8,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6049849991850398559, guid: d834686678db2a44986625a9b9a2f1e8,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6049849991850398559, guid: d834686678db2a44986625a9b9a2f1e8,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6049849991850398559, guid: d834686678db2a44986625a9b9a2f1e8,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6049849991850398559, guid: d834686678db2a44986625a9b9a2f1e8,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6049849991850398559, guid: d834686678db2a44986625a9b9a2f1e8,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6049849991850398559, guid: d834686678db2a44986625a9b9a2f1e8,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6049849991850398559, guid: d834686678db2a44986625a9b9a2f1e8,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6049849991850398559, guid: d834686678db2a44986625a9b9a2f1e8,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7610193777891145826, guid: d834686678db2a44986625a9b9a2f1e8,
+        type: 3}
+      propertyPath: m_Name
+      value: purple_enemy
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d834686678db2a44986625a9b9a2f1e8, type: 3}
 --- !u!1 &541952532
 GameObject:
   m_ObjectHideFlags: 0
