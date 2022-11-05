@@ -12,7 +12,7 @@ public class PlayerCtlr : MonoBehaviour {
 
     private float cool_down_time = 0;
     public float gun_distance = 0.2f;
-
+    public float speed = 10f;
     [SerializeField] ObjctPoolController ObjPoolCtrl;
     void Start( ) {
         rb = GetComponent<Rigidbody2D>( );
@@ -31,12 +31,20 @@ public class PlayerCtlr : MonoBehaviour {
         Move( );
     }
     void ProcessInputs( ) {
-        float moveX = Input.GetAxisRaw( "Horizontal" );
-        //float moveY = Input.GetAxisRaw( "Vertical" );
-        moveDirection = new Vector3( moveX, 0.0f, 0.0f );
+        //float moveX = Input.GetAxisRaw( "Horizontal" );
+        ////float moveY = Input.GetAxisRaw( "Vertical" );
+        //moveDirection = new Vector3( moveX, 0.0f, 0.0f );
+        if ((Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D))&&transform.position.x < 4.4f)
+        {
+            transform.position += transform.right * speed * Time.deltaTime;
+        }
+        if ((Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A))&& transform.position.x > -4.4f)
+        {
+            transform.position -= transform.right * speed * Time.deltaTime;
+        }
     }
     private void Move( ) {
-        rb.velocity = new Vector3( moveDirection.x * moveSpeed, 0.0f );
+        //rb.velocity = new Vector3( moveDirection.x * moveSpeed, 0.0f );
     }
 
     private void Fire( ) {

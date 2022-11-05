@@ -43,14 +43,16 @@ public class AllEnemyCtlr : MonoBehaviour
     }
 
     Vector3 GetPoint( Vector3 p0, Vector3 p1, Vector3 p2, float t ) {
-        var a = Vector3.Lerp( p0, p1, t ); // 緑色の点1
-        var b = Vector3.Lerp( p1, p2, t ); // 緑色の点2
-        //var c = Vector3.Lerp( p2, p3, t ); // 緑色の点3
+        //点1
+        var a = Vector3.Lerp( p0, p1, t );
+        //点2
+        var b = Vector3.Lerp( p1, p2, t );
+        //var c = Vector3.Lerp( p2, p3, t );
 
-        //var d = Vector3.Lerp( a, b, t );   // 青色の点1
-        //var e = Vector3.Lerp( b, c, t );   // 青色の点2
+        //var d = Vector3.Lerp( a, b, t );
+        //var e = Vector3.Lerp( b, c, t );
 
-        return Vector3.Lerp( a, b, t );    // 黒色の点
+        return Vector3.Lerp( a, b, t );
     }
 
     private void OnTriggerEnter2D( Collider2D collision ) {

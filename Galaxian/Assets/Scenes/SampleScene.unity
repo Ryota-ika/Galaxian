@@ -259,7 +259,7 @@ PrefabInstance:
     - target: {fileID: 6049849991850398559, guid: d834686678db2a44986625a9b9a2f1e8,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.94
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6049849991850398559, guid: d834686678db2a44986625a9b9a2f1e8,
         type: 3}
@@ -432,6 +432,7 @@ MonoBehaviour:
   Gun: {fileID: 2676859092414069653, guid: 9d5346a1785738e4a8900a4794ea73d2, type: 3}
   FirePosition: {fileID: 1086629949}
   gun_distance: 1
+  speed: 10
   ObjPoolCtrl: {fileID: 1705447881}
 --- !u!1 &705507993
 GameObject:
