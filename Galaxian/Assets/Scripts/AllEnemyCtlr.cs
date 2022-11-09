@@ -42,7 +42,7 @@ public class AllEnemyCtlr : MonoBehaviour
         //transform.Translate(p);
     }
 
-    Vector3 GetPoint( Vector3 p0, Vector3 p1, Vector3 p2, float t ) {
+    protected virtual Vector3 GetPoint( Vector3 p0, Vector3 p1, Vector3 p2, float t ) {
         //“_1
         var a = Vector3.Lerp( p0, p1, t );
         //“_2
