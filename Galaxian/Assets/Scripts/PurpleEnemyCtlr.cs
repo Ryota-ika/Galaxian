@@ -4,17 +4,30 @@ using UnityEngine;
 
 public class PurpleEnemyCtlr : AllEnemyCtlr
 {
+    Vector3 p0;
+    Vector3 p1;
+    Vector3 p2;
+    float t = 0;
     public GameObject explosion;
     // Start is called before the first frame update
-    //void Start( ) {
-    //}
+    void Start()
+    {
+        p1 = position1.transform.position;
+        p2 = position2.transform.position;
+        p0 = this.gameObject.transform.position;
+        position1.transform.position = new Vector3(1,1,0);
 
-    //// Update is called once per frame
-    //void Update( ) {
+    }
 
-    //}
+    // Update is called once per frame
+    void Update()
+    {
+        //this.gameObject.transform.position = GetPoint(p0, p1, p2, t);
+        t+=0.5f*Time.deltaTime;
 
-    protected override Vector3 GetPoint(Vector3 p0, Vector3 p1, Vector3 p2, float t)
+    }
+
+    Vector3 GetPoint(Vector3 p0, Vector3 p1, Vector3 p2, float t)
     {
         //“_1
         var a = Vector3.Lerp(p0, p1, t);
