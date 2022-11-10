@@ -4,40 +4,34 @@ using UnityEngine;
 
 public class PurpleEnemyCtlr : AllEnemyCtlr
 {
-    //Vector3 p0;
-    //Vector3 p1;
-    //Vector3 p2;
-    //float t = 0;
+    Vector3 player_pos;
+    Vector3 enemy_pos;
+    bool flame1=true;
     public GameObject explosion;
     // Start is called before the first frame update
-    void Start()
-    {
-        //p1 = position1.transform.position;
-        //p2 = position2.transform.position;
-        //p0 = this.gameObject.transform.position;
-        //position1.transform.position = new Vector3(1,1,0);
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        //this.gameObject.transform.position = GetPoint(p0, p1, p2, t);
-        //t+=0.5f*Time.deltaTime;
-
-    }
-
-    //Vector3 GetPoint(Vector3 p0, Vector3 p1, Vector3 p2, float t)
+    //void Start()
     //{
-    //    //“_1
-    //    var a = Vector3.Lerp(p0, p1, t);
-    //    //“_2
-    //    var b = Vector3.Lerp(p1, p2, t);
-    //    //var c = Vector3.Lerp( p2, p3, t );
+    //    //p1 = position1.transform.position;
+    //    //p2 = position2.transform.position;
+    //    //p0 = this.gameObject.transform.position;
+    //    //position1.transform.position = new Vector3(1,1,0);
 
-    //    //var d = Vector3.Lerp( a, b, t );
-    //    //var e = Vector3.Lerp( b, c, t );
-
-    //    return Vector3.Lerp(a, b, t);
     //}
+
+    //// Update is called once per frame
+    //void Update()
+    //{
+    //    //this.gameObject.transform.position = GetPoint(p0, p1, p2, t);
+    //    //t+=0.5f*Time.deltaTime;
+
+    //}
+    protected override void Attack( ) {
+        if( flame1 ) {
+            player_pos = target.transform.position;
+            enemy_pos = this.transform.position;
+            flame1 = false;
+        }
+        this.gameObject.transform.position += ( player_pos - enemy_pos ).normalized * Time.deltaTime * 1.2f;
+        Debug.Log( target.transform.position.normalized );
+    }
 }
