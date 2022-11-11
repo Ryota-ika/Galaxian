@@ -77,7 +77,7 @@ GameObject:
   - component: {fileID: 3798622634867486765}
   m_Layer: 0
   m_Name: red_enemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -183,8 +183,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 000cb604357ecf7499c72ec188f23271, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  target: {fileID: 0}
   position1: {fileID: 56056303}
   position2: {fileID: 1073562308}
+  move_enemy: 0
   explosion: {fileID: 0}
 --- !u!61 &3798622634867486765
 BoxCollider2D:

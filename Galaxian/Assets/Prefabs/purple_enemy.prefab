@@ -76,7 +76,7 @@ GameObject:
   - component: {fileID: 4585522124315443584}
   m_Layer: 0
   m_Name: purple_enemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -188,6 +188,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74e2cba30e4240c45b7cefcfe3154231, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  target: {fileID: 0}
   position1: {fileID: 1298585554}
   position2: {fileID: 1616800233}
+  move_enemy: 0
   explosion: {fileID: 0}

@@ -24,7 +24,10 @@ public class AllEnemyCtlr : MonoBehaviour {
 
     // Update is called once per frame
     void Update( ) {
+        //if( target.transform.position == this.gameObject.transform.position ) {
 
+        //    target.SetActive( false );
+        //}
         if( move_enemy ) {
             if( t >= 1 ) {
                 Attack( );
