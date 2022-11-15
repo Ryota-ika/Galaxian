@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class AllEnemyCtlr : MonoBehaviour {
@@ -28,6 +29,24 @@ public class AllEnemyCtlr : MonoBehaviour {
 
         //    target.SetActive( false );
         //}
+        if( this.transform.position.y < -5 ) {
+            
+            this.gameObject.transform.position = new Vector3( p0.x, 8, p0.z );
+            move_enemy = false;
+            //pos.y -= 1;
+            //if( this.gameObject.transform.position == p0 ) {
+            //    this.gameObject.transform.position = p0;
+            //    move_enemy = false;
+
+            //};
+
+        }
+        //—Ž‰º‚·‚éˆ—
+        if( this.transform.position.y >= p0.y&&move_enemy==false ) {
+            Vector3 pos = this.gameObject.transform.position;
+            pos.y -= 1*Time.deltaTime;
+            this.gameObject.transform.position = pos;
+        }
         if( move_enemy ) {
             if( t >= 1 ) {
                 Attack( );
