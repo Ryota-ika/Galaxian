@@ -1,7 +1,7 @@
-
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 public class PlayerCtlr : MonoBehaviour {
     public float moveSpeed = 20f;
     private Vector2 moveDirection;
@@ -34,11 +34,11 @@ public class PlayerCtlr : MonoBehaviour {
         //float moveX = Input.GetAxisRaw( "Horizontal" );
         ////float moveY = Input.GetAxisRaw( "Vertical" );
         //moveDirection = new Vector3( moveX, 0.0f, 0.0f );
-        if ((Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D))&&transform.position.x < 4.4f)
+        if ((Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D))&&transform.position.x < 4.0f)
         {
             transform.position += transform.right * speed * Time.deltaTime;
         }
-        if ((Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A))&& transform.position.x > -4.4f)
+        if ((Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A))&& transform.position.x > -4.0f)
         {
             transform.position -= transform.right * speed * Time.deltaTime;
         }
@@ -65,6 +65,7 @@ public class PlayerCtlr : MonoBehaviour {
     private void OnCollisionEnter2D( Collision2D collision ) {
         if( collision.gameObject.tag == "Enemy" ) {
             this.gameObject.SetActive( false );
+            SceneManager.LoadScene("GameOver");
         }
     }
 }
