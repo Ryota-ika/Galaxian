@@ -28,6 +28,7 @@ public class CreateBlueEnemy : MonoBehaviour {
 
         if( cool_down_time <= 0 ) {
             int create_random = Random.Range( 0, 30 );
+            //blue_enemies.Add();
             //buleenemy1
             blue_enemies[ create_random ].GetComponent<AllEnemyCtlr>( ).move_enemy = true;
             cool_down_time = 3f;
