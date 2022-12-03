@@ -13,6 +13,9 @@ public class CreateRedEnemy : MonoBehaviour {
             GameObject g = Instantiate( red_enemy, new Vector3( i * 0.6f - 1.5f, 5, 0 ), Quaternion.identity);
             red_enemies.Add( g );
             g.name="enemy"+red_enemies.Count;
+
+
+
         }
     }
 

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 public class PlayerCtlr : MonoBehaviour {
     public float moveSpeed = 20f;
@@ -9,6 +10,8 @@ public class PlayerCtlr : MonoBehaviour {
 
     public GameObject Gun;
     public GameObject FirePosition;
+
+    GameObject text;
 
     private float cool_down_time = 0;
     public float gun_distance = 0.2f;
@@ -62,10 +65,18 @@ public class PlayerCtlr : MonoBehaviour {
             cool_down_time = gun_distance;
         }
     }
+
+    void ChangeScene()
+    {
+        SceneManager.LoadScene("GameOver");
+    }
     private void OnCollisionEnter2D( Collision2D collision ) {
         if( collision.gameObject.tag == "Enemy" ) {
             this.gameObject.SetActive( false );
-            SceneManager.LoadScene("GameOver");
+            text = GameObject.Find("Text (Legacy)");
+            Text clear_text=text.GetComponent<Text>();
+            clear_text.text = "GameOver!";
+            Invoke("ChangeScene", 3.0f);
         }
     }
 }
