@@ -71,7 +71,7 @@ public class PlayerCtlr : MonoBehaviour {
         SceneManager.LoadScene("GameOver");
     }
     private void OnCollisionEnter2D( Collision2D collision ) {
-        if( collision.gameObject.tag == "Enemy" ) {
+        if( collision.gameObject.tag == "Enemy"||collision.gameObject.tag=="EnemyGun" ) {
             this.gameObject.SetActive( false );
             text = GameObject.Find("Text (Legacy)");
             Text clear_text=text.GetComponent<Text>();

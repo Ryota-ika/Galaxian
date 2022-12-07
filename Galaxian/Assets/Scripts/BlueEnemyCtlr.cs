@@ -23,7 +23,7 @@ public class BlueEnemyCtlr : AllEnemyCtlr {
             enemy_pos = this.transform.position;
             flame1 = false;
         }
-        this.gameObject.transform.position += ( player_pos-enemy_pos ).normalized * Time.deltaTime * 1.5f;
+        this.gameObject.transform.position += ( player_pos-enemy_pos ).normalized * Time.deltaTime * 2.0f;
         Debug.Log( target.transform.position.normalized );
     }
 }
