@@ -31,7 +31,7 @@ public class RedEnemyCtlr : AllEnemyCtlr
             enemy_pos = this.transform.position;
             flame1 = false;
         }
-        this.gameObject.transform.position += ( player_pos - enemy_pos ).normalized * Time.deltaTime * 2.2f;
+        this.gameObject.transform.position += ( player_pos - enemy_pos ).normalized * Time.deltaTime * 1.0f;
         Debug.Log( target.transform.position.normalized );
     }
 }

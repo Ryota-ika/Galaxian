@@ -24,7 +24,8 @@ public class CreateRedEnemy : MonoBehaviour {
         cool_down_time -= Time.deltaTime;
 
         if( cool_down_time <= 0 ) {
-            int create_random = Random.Range( 0, 6 );
+            red_enemies.RemoveAll (item => item == null);
+            int create_random = Random.Range( 0, red_enemies.Count );
             //buleenemy1
             red_enemies[ create_random ].GetComponent<AllEnemyCtlr>( ).move_enemy = true;
             cool_down_time = 10f;

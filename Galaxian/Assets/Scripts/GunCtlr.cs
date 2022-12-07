@@ -11,7 +11,8 @@ public class GunCtlr : MonoBehaviour {
     //Gameobject‚ªactive‰»‚³‚ê‚½‚Æ‚«‚É©“®“I‚Éˆ—‚ğs‚Á‚Ä‚­‚ê‚éŠÖ”
     private void OnEnable( ) {
         rb = GetComponent<Rigidbody2D>( );
-        rb.velocity = new Vector3( 0, gun_speed, 0 );
+        //rb.velocity = new Vector3( 0, gun_speed, 0 );
+        rb.velocity = transform.up*gun_speed;
 
     }
 

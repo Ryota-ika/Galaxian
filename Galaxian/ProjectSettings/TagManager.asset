@@ -15,6 +15,7 @@ TagManager:
   - PlayerRay
   - Rocket
   - PlayerGun
+  - EnemyGun
   layers:
   - Default
   - TransparentFX
