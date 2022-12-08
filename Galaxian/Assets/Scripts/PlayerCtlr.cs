@@ -71,10 +71,21 @@ public class PlayerCtlr : MonoBehaviour {
         SceneManager.LoadScene("GameOver");
     }
     private void OnCollisionEnter2D( Collision2D collision ) {
-        if( collision.gameObject.tag == "Enemy"||collision.gameObject.tag=="EnemyGun" ) {
+        if( collision.gameObject.tag == "Enemy"/*||collision.gameObject.tag=="EnemyGun"*/ ) {
             this.gameObject.SetActive( false );
             text = GameObject.Find("Text (Legacy)");
             Text clear_text=text.GetComponent<Text>();
+            clear_text.text = "GameOver!";
+            Invoke("ChangeScene", 3.0f);
+        }
+    }
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.tag== "EnemyGun")
+        {
+            this.gameObject.SetActive( false );
+            text = GameObject.Find("Text (Legacy)");
+            Text clear_text = text.GetComponent<Text>();
             clear_text.text = "GameOver!";
             Invoke("ChangeScene", 3.0f);
         }
