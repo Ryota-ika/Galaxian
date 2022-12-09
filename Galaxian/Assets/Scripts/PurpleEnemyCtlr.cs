@@ -7,7 +7,6 @@ public class PurpleEnemyCtlr : AllEnemyCtlr
     Vector3 player_pos;
     Vector3 enemy_pos;
     bool flame1=true;
-    public GameObject explosion;
     // Start is called before the first frame update
     //void Start()
     //{
@@ -27,6 +26,7 @@ public class PurpleEnemyCtlr : AllEnemyCtlr
     //}
     protected override void Attack( ) {
         if( flame1 ) {
+            target = GameObject.Find( "player" );
             player_pos = target.transform.position;
             enemy_pos = this.transform.position;
             flame1 = false;

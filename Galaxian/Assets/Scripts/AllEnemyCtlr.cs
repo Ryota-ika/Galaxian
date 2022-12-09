@@ -4,6 +4,7 @@ using TMPro;
 using UnityEngine;
 
 public class AllEnemyCtlr : MonoBehaviour {
+    public GameObject explosion;
     public GameObject target;
     public GameObject position1;
     public GameObject position2;
@@ -110,6 +111,7 @@ public class AllEnemyCtlr : MonoBehaviour {
 
     private void OnTriggerEnter2D( Collider2D collision ) {
         if( collision.tag == "PlayerGun" ) {
+            Instantiate(explosion,transform.position,Quaternion.identity);
             //Destroy(collision.gameObject);
             collision.gameObject.SetActive( false );
             Destroy( this.gameObject );

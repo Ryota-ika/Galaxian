@@ -215,6 +215,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 000cb604357ecf7499c72ec188f23271, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  explosion: {fileID: 1845955007268882, guid: 67a684e320da6e7439421a07e3fa265c, type: 3}
   target: {fileID: 0}
   position1: {fileID: 56056303}
   position2: {fileID: 1073562308}
@@ -223,7 +224,6 @@ MonoBehaviour:
     type: 3}
   move_enemy: 0
   enemy_cool_down_time: 0
-  explosion: {fileID: 0}
 --- !u!61 &3798622634867486765
 BoxCollider2D:
   m_ObjectHideFlags: 0

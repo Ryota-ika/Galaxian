@@ -220,6 +220,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74e2cba30e4240c45b7cefcfe3154231, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  explosion: {fileID: 1845955007268882, guid: 67a684e320da6e7439421a07e3fa265c, type: 3}
   target: {fileID: 0}
   position1: {fileID: 1298585554}
   position2: {fileID: 1616800233}
@@ -228,4 +229,3 @@ MonoBehaviour:
     type: 3}
   move_enemy: 0
   enemy_cool_down_time: 0
-  explosion: {fileID: 0}

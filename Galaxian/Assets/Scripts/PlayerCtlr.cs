@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 public class PlayerCtlr : MonoBehaviour {
+    public GameObject explosion;
     public float moveSpeed = 20f;
     private Vector2 moveDirection;
     private Rigidbody2D rb;
@@ -16,8 +17,11 @@ public class PlayerCtlr : MonoBehaviour {
     private float cool_down_time = 0;
     public float gun_distance = 0.2f;
     public float speed = 10f;
+    GameObject objpool;
     [SerializeField] ObjctPoolController ObjPoolCtrl;
     void Start( ) {
+        objpool=GameObject.Find( "objpool" );
+        ObjPoolCtrl = objpool.GetComponent<ObjctPoolController>();
         rb = GetComponent<Rigidbody2D>( );
         GetComponent<Rigidbody2D>( );
         //moveDirection = new Vector3( 0.0f, 0.0f,0.0f);
@@ -72,6 +76,7 @@ public class PlayerCtlr : MonoBehaviour {
     }
     private void OnCollisionEnter2D( Collision2D collision ) {
         if( collision.gameObject.tag == "Enemy"/*||collision.gameObject.tag=="EnemyGun"*/ ) {
+            Instantiate(explosion,transform.position,Quaternion.identity);
             this.gameObject.SetActive( false );
             text = GameObject.Find("Text (Legacy)");
             Text clear_text=text.GetComponent<Text>();
@@ -83,6 +88,7 @@ public class PlayerCtlr : MonoBehaviour {
     {
         if (other.gameObject.tag== "EnemyGun")
         {
+            Instantiate(explosion,transform.position,Quaternion.identity);
             this.gameObject.SetActive( false );
             text = GameObject.Find("Text (Legacy)");
             Text clear_text = text.GetComponent<Text>();

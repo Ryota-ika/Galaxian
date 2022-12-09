@@ -5,7 +5,6 @@ using UnityEngine;
 public class RedEnemyCtlr : AllEnemyCtlr
 {
     GameObject[] red_enemies;
-    public GameObject explosion;
     Vector3 player_pos;
     Vector3 enemy_pos;
     bool flame1=true;
@@ -27,6 +26,7 @@ public class RedEnemyCtlr : AllEnemyCtlr
 
     protected override void Attack( ) {
         if( flame1 ) {
+            target = GameObject.Find( "player" );
             player_pos = target.transform.position;
             enemy_pos = this.transform.position;
             flame1 = false;
