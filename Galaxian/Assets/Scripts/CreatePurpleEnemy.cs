@@ -7,7 +7,7 @@ public class CreatePurpleEnemy : MonoBehaviour
     int ENEMY_WIDTH=8;
     public List<GameObject> purple_enemies = new List<GameObject>();
     public GameObject purple_enemy;
-    private float cool_down_time=0;
+    private float cool_down_time=1;
     // Start is called before the first frame update
     void Start()
     {

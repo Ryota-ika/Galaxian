@@ -6,7 +6,7 @@ public class CreateRedEnemy : MonoBehaviour {
     const int ENEMY_WIDTH = 6;
     public List<GameObject> red_enemies = new List<GameObject>();
     public GameObject red_enemy;
-    private float cool_down_time = 0;
+    private float cool_down_time = 2;
     // Start is called before the first frame update
     void Start( ) {
         for( int i = 0; i < ENEMY_WIDTH; i++ ) {

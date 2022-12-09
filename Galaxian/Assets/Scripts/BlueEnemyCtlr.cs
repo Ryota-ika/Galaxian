@@ -17,13 +17,19 @@ public class BlueEnemyCtlr : AllEnemyCtlr {
 
     //}
     protected override void Attack( ) {
-        if( flame1) {
+        if( flame1 ) {
             target = GameObject.Find( "player" );
-            player_pos = target.transform.position;
-            enemy_pos = this.transform.position;
-            flame1 = false;
+            if( target == null ) {
+                //target = null;
+                player_pos = new Vector3( 0, 0, 0 );
+            } else {
+                player_pos = target.transform.position;
+                enemy_pos = this.transform.position;
+                flame1 = false;
+
+            }
         }
-        this.gameObject.transform.position += ( player_pos-enemy_pos ).normalized * Time.deltaTime * 2.0f;
-        Debug.Log( target.transform.position.normalized );
+        this.gameObject.transform.position += ( player_pos - enemy_pos ).normalized * Time.deltaTime * 2.0f;
+        //Debug.Log( target.transform.position.normalized );
     }
 }
