@@ -32,6 +32,7 @@ public class PurpleEnemyCtlr : AllEnemyCtlr
             flame1 = false;
         }
         this.gameObject.transform.position += ( player_pos - enemy_pos ).normalized * Time.deltaTime * 1.5f;
+        this.gameObject.transform.position+=new Vector3(Mathf.Sin(Time.time)*5.0f*Time.deltaTime,0,0);
         Debug.Log( target.transform.position.normalized );
     }
 }
