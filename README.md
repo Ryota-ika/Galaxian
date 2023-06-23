@@ -1,8 +1,7 @@
 # Galaxian
 
 開発環境
-・Unity
-・C#
+・Unity　Ver2021.2.11
 
 説明
 Galaxianというゲームを再現して作りました。
